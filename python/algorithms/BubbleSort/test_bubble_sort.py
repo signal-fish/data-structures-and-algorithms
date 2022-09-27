@@ -1,14 +1,15 @@
 import unittest
+import random
 from bubble_sort import asc_bubble_sort, des_bubble_sort
 
 class TestBubbleSort(unittest.TestCase):
 
     def setUp(self):
-        self.a1 = [3, 5, 4, 2, 1]
-        self.a2 = [5, 2, 1, 4, 3]
-        self.a3 = [3, 2, 1, 3, 2]
-        self.a4 = [1, 2, 3, 4, 5]
-        self.a5 = [5, 4, 3, 2, 1]
+        self.a1 = [random.randint(i, i+100) for i in range(1000)]
+        self.a2 = [random.randint(i, i+100) for i in range(1000)]
+        self.a3 = [random.randint(i, i+100) for i in range(1000)]
+        self.a4 = [random.randint(i, i+100) for i in range(1000)]
+        self.a5 = [random.randint(i, i+100) for i in range(1000)]
 
     def test_asc_bubble_sort(self):
         self.assertEqual(asc_bubble_sort(self.a1), sorted(self.a1))
