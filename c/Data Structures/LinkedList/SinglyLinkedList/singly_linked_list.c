@@ -54,7 +54,7 @@ int append(List *list, int data) {
 
 // Get the element of the ith Node
 int get_elem(List *list, int idx) {
-  if (idx < 0 || idx > len(list) - 1) {
+  if (idx < 0 || idx >= len(list)) {
     return -1;
   }
   Node *cur = list->head;
@@ -111,7 +111,7 @@ void print(List *list) {
 
 // Update the node lement of the linked list at the specified position
 int update(List *list, int idx, int data) {
-  if (idx < 0 || idx > len(list) - 1 || is_empty(list)) {
+  if (idx < 0 || idx >= len(list) || is_empty(list)) {
     return -1;
   }
   Node *cur = list->head;
@@ -141,15 +141,16 @@ int delete_node(List *list, int idx) {
 // Clear all nodes of the linked list
 int clear(List *list) {
   if (is_empty(list)) {
-    return -1;
+    return 0;
   }
   Node *cur = list->head;
-  Node *next;
-  while (cur != NULL) {
-    next = cur->next;
-    free(cur);
-    cur = next;
+  while (cur->next != NULL) {
+    Node *tmp = cur;
+    cur = cur->next;
+    free(tmp);
   }
+  free(cur);
+  cur = NULL;
   list->head = NULL;
   list->length = 0;
   return 0;
@@ -195,14 +196,20 @@ void asc_sort(List *list) {
   }
 }
 
+int destroy(List *list) {
+  if (list == NULL) {
+    return -1;
+  }
+  free(list);
+  return 0;
+}
+
 int main() {
   List *list = new_singly_linked_list();
-  printf("list = %p\n", list);
-  printf("list->head = %p\n", list->head);
   print(list);
 
-  append(list, 2);
   append(list, 1);
+  append(list, 2);
   print(list);
 
   prepend(list, 0);
@@ -228,36 +235,21 @@ int main() {
   prepend(list, 9);
   prepend(list, 9);
   prepend(list, 9);
+  asc_sort(list);
   print(list);
   printf("no. of 9 = %d\n", count(list, 9));
   printf("no. of 0 = %d\n", count(list, 0));
   printf("no. of -1 = %d\n", count(list, -1));
 
-  asc_sort(list);
-  print(list);
-
-  clear(list);
-  print(list);
-  printf("list: %p\n", list);
-  printf("list->head: %p\n", list->head);
-
-  for (int n = 0; n < 1000; n++) {
+  for (int n = 0; n < 3; n++) {
     append(list, n);
   }
-  // printf("list->head: %p\n", list);
-  // printf("list->head: %p\n", list->head);
-  // int i = 10;
-  // while (i > 0) {
-  //   prepend(list, i);
-  //   i--;
-  // }
   print(list);
-  printf("%d\n", len(list));
+
   asc_sort(list);
   print(list);
-  // printf("%d\n", len(list));
-  print(list);
+
   clear(list);
-  free(list);
+  destroy(list);
   return 0;
 }
