@@ -1,0 +1,17 @@
+Running suite Array
+test_array.ck:22:P:Array Util:test_init_array_neg:0: Passed
+test_array.ck:27:P:Array Util:test_append:0: Passed
+test_array.ck:33:P:Array Util:test_pop:0: Passed
+test_array.ck:38:P:Array Util:test_print:0: Passed
+test_array.ck:52:P:Array Util:test_get:0: Passed
+test_array.ck:59:P:Array Util:test_insert:0: Passed
+test_array.ck:66:P:Array Util:test_count:0: Passed
+test_array.ck:75:P:Array Util:test_array_index:0: Passed
+test_array.ck:84:P:Array Util:test_array_last_index:0: Passed
+test_array.ck:91:P:Array Util:test_update:0: Passed
+test_array.ck:104:P:Array Util:test_reverse:0: Passed
+test_array.ck:130:P:Array Util:test_asc_sort:0: Passed
+test_array.ck:140:P:Array Util:test_remove_item:0: Passed
+test_array.ck:146:P:Array Util:test_clear:0: Passed
+Results for all suites run:
+100%: Checks: 14, Failures: 0, Errors: 0

@@ -1,0 +1,4 @@
+Running suite insertionSort
+test_insertion_sort.ck:41:P:insertionSort Util:test_insertion_sort:0: Passed
+Results for all suites run:
+100%: Checks: 1, Failures: 0, Errors: 0

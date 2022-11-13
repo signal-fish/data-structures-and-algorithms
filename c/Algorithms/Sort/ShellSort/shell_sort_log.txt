@@ -1,0 +1,4 @@
+Running suite shellSort
+test_shell_sort.ck:41:P:shellSort Util:test_shell_sort:0: Passed
+Results for all suites run:
+100%: Checks: 1, Failures: 0, Errors: 0

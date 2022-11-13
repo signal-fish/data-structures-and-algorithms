@@ -1,0 +1,4 @@
+Running suite quickSort
+test_quick_sort.ck:41:P:quickSort Util:test_quick_sort:0: Passed
+Results for all suites run:
+100%: Checks: 1, Failures: 0, Errors: 0

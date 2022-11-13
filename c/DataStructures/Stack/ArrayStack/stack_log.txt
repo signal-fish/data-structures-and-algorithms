@@ -1,0 +1,8 @@
+Running suite Stack
+test_array_stack.ck:24:P:Stack Util:test_init_stack_neg:0: Passed
+test_array_stack.ck:31:P:Stack Util:test_push:0: Passed
+test_array_stack.ck:40:P:Stack Util:test_pop:0: Passed
+test_array_stack.ck:47:P:Stack Util:test_get_top:0: Passed
+test_array_stack.ck:52:P:Stack Util:test_print:0: Passed
+Results for all suites run:
+100%: Checks: 5, Failures: 0, Errors: 0
