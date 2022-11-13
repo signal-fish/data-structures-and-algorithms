@@ -1,0 +1,8 @@
+Running suite Queue
+test_array_queue.ck:27:P:Queue Util:test_init_queue_neg:0: Passed
+test_array_queue.ck:37:P:Queue Util:test_en_queue:0: Passed
+test_array_queue.ck:56:P:Queue Util:test_de_queue:0: Passed
+test_array_queue.ck:68:P:Queue Util:test_get_head:0: Passed
+test_array_queue.ck:73:P:Queue Util:test_print:0: Passed
+Results for all suites run:
+100%: Checks: 5, Failures: 0, Errors: 0

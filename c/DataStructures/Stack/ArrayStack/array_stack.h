@@ -3,7 +3,7 @@
  > Author: Signal Yu
  > Mail: signalfish38861721@gmail.com
  > Time: 10/17/2022
- > Desc: This is a header file of stack.c
+ > Desc: This is a header file of array_stack.c
 ***********************************************/
 
 typedef struct array_stack {

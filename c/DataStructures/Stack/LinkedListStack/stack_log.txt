@@ -1,0 +1,8 @@
+Running suite Stack
+test_linked_list_stack.ck:26:P:Stack Util:test_new_node:0: Passed
+test_linked_list_stack.ck:33:P:Stack Util:test_push:0: Passed
+test_linked_list_stack.ck:46:P:Stack Util:test_pop:0: Passed
+test_linked_list_stack.ck:56:P:Stack Util:test_get_top:0: Passed
+test_linked_list_stack.ck:61:P:Stack Util:test_print:0: Passed
+Results for all suites run:
+100%: Checks: 5, Failures: 0, Errors: 0
