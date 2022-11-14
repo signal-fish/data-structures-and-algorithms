@@ -1,0 +1,9 @@
+Running suite Queue
+test_circular_queue.ck:21:P:Queue Util:test_init_circular_queue:0: Passed
+test_circular_queue.ck:25:P:Queue Util:test_init_circular_queue_neg:0: Passed
+test_circular_queue.ck:44:P:Queue Util:test_en_queue:0: Passed
+test_circular_queue.ck:61:P:Queue Util:test_de_queue:0: Passed
+test_circular_queue.ck:75:P:Queue Util:test_get_head:0: Passed
+test_circular_queue.ck:81:P:Queue Util:test_print:0: Passed
+Results for all suites run:
+100%: Checks: 6, Failures: 0, Errors: 0

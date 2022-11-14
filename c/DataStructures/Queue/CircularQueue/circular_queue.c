@@ -1,16 +1,17 @@
+
 /**********************************************
- > File Name: array_queue.c
+ > File Name: circular_queue.c
  > Author: Signal Yu
  > Mail: signalfish38861721@gmail.com
- > Time: 10/17/2022
- > Desc: Implement stack with array
+ > Time: 11/14/2022
+ > Desc: Implement queue with array
 ***********************************************/
 
-#include "array_queue.h"
+#include "circular_queue.h"
 #include <stdio.h>
 #include <stdlib.h>
 
-Queue *init_queue(int cap) {
+Queue *init_circular_queue(int cap) {
   if (cap < 0) {
     return NULL;
   }
@@ -35,16 +36,12 @@ void destroy(Queue *queue) {
   if (queue == NULL) {
     return;
   }
-  if (is_empty(queue)) {
-    free(queue);
-    queue = NULL;
-    return;
-  }
   free(queue->arr);
   queue->arr = NULL;
+  queue->capacity = 0;
   queue->length = 0;
-  queue->head = NULL;
-  queue->tail = NULL;
+  queue->head = -1;
+  queue->tail = -1;
   free(queue);
   queue = NULL;
   return;
@@ -60,11 +57,11 @@ int en_queue(Queue *queue, int data) {
   if (is_empty(queue)) {
     queue->head++;
     queue->tail++;
-    queue->arr[queue->tail] = data;
     queue->length++;
+    queue->arr[queue->tail] = data;
     return 0;
   }
-  queue->tail++;
+  queue->tail = (queue->tail + 1) % queue->capacity;
   queue->arr[queue->tail] = data;
   queue->length++;
   return 0;
@@ -78,13 +75,13 @@ int de_queue(Queue *queue) {
     return -1;
   }
   int res = queue->arr[queue->head];
-  queue->head++;
   queue->length--;
   if (is_empty(queue)) {
     queue->head = -1;
     queue->tail = -1;
     return res;
   }
+  queue->head = (queue->head + 1) % queue->capacity;
   return res;
 }
 
@@ -99,18 +96,16 @@ void print(Queue *queue) {
   if (queue == NULL) {
     return;
   }
-  printf("head<-[");
   if (is_empty(queue)) {
-    printf("]<-tail\n");
+    printf("head->[]<-tail\n");
     return;
   }
+  printf("head->[");
   for (int i = queue->head; i <= queue->tail; i++) {
     if (i == queue->tail) {
-      printf("%d", queue->arr[i]);
-      break;
+      printf("%d]<-tail\n", queue->arr[i]);
+      return;
     }
     printf("%d ", queue->arr[i]);
   }
-  printf("]<-tail\n");
-  return;
 }

@@ -1,4 +1,3 @@
-
 #include "array_queue.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -86,6 +85,7 @@ void queue_teardown() {
 
 #main-pre
     tcase_add_checked_fixture(tc1_1, queue_setup, queue_teardown);
+    srunner_set_fork_status(sr, CK_NOFORK);
     srunner_set_log(sr, "queue_log.txt");
 
 #main-post

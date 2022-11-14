@@ -1,0 +1,8 @@
+Running suite Queue
+test_linked_list_queue.ck:20:P:Queue Util:test_new_node:0: Passed
+test_linked_list_queue.ck:29:P:Queue Util:test_init_list_queue:0: Passed
+test_linked_list_queue.ck:46:P:Queue Util:test_en_queue:0: Passed
+test_linked_list_queue.ck:64:P:Queue Util:test_de_queue:0: Passed
+test_linked_list_queue.ck:70:P:Queue Util:test_print:0: Passed
+Results for all suites run:
+100%: Checks: 5, Failures: 0, Errors: 0
