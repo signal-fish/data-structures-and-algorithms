@@ -1,0 +1,11 @@
+Running suite Tree
+test_binary_tree.ck:25:P:Tree Util:test_new_node:0: Passed
+test_binary_tree.ck:31:P:Tree Util:test_init_binary_tree:0: Passed
+test_binary_tree.ck:40:P:Tree Util:test_insert:0: Passed
+test_binary_tree.ck:47:P:Tree Util:test_in_order:0: Passed
+test_binary_tree.ck:60:P:Tree Util:test_find_node:0: Passed
+test_binary_tree.ck:72:P:Tree Util:test_find_successor:0: Passed
+test_binary_tree.ck:77:P:Tree Util:test_delete:0: Passed
+test_binary_tree.ck:94:P:Tree Util:test_destroy:0: Passed
+Results for all suites run:
+100%: Checks: 8, Failures: 0, Errors: 0
